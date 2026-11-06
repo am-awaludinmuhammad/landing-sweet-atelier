@@ -1,9 +1,14 @@
 
 import { ArrowRight } from 'lucide-react'
+import { cn } from '../lib/utils'
 
 export function AboutSection() {
   return (
-    <section className="bg-white px-5 md:px-9 py-16 md:py-24 flex flex-col md:flex-row gap-10 md:gap-12 items-start">
+    <div className={cn(
+      "px-5 py-16 md:py-24 flex flex-col gap-10 items-start max-w-[94rem] mx-auto w-full",
+      "md:px-9 md:flex-row md:gap-12",
+      'lg:px-14 lg:py-[120px]'
+    )}>
 
       {/* Image Composition */}
       <div className="relative w-full md:w-1/2 h-[400px] md:h-[700px] shrink-0">
@@ -61,6 +66,6 @@ export function AboutSection() {
         </button>
 
       </div>
-    </section>
+    </div>
   )
 }

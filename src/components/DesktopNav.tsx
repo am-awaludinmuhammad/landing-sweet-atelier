@@ -9,7 +9,7 @@ export function DesktopNav() {
   ]
 
   return (
-    <header className="hidden md:flex sticky top-0 z-50 bg-white border-b border-neutral-200 h-20 px-8 items-center justify-between">
+    <header className="hidden md:flex sticky top-0 z-50 bg-white border-b border-neutral-200 h-20 px-14 items-center justify-between max-w-[94rem] mx-auto">
       {/* Primary Links */}
       <nav className="flex items-center gap-5 flex-1">
         {NAV_LINKS.map((link, idx) => (

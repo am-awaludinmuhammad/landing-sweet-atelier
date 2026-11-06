@@ -6,8 +6,8 @@ import { FavoriteProductCard } from './FavoriteProductCard'
 
 export function ShopSection() {
   return (
-    <section className={cn(
-      'bg-white flex flex-col px-5 py-16',
+    <div className={cn(
+      'flex flex-col px-5 py-16 max-w-[94rem] mx-auto w-full',
       'md:px-9 md:py-24',
       'lg:px-14 lg:py-[120px]'
     )}>
@@ -123,7 +123,7 @@ export function ShopSection() {
           </button>
         </div>
       </div>
-    </section>
+    </div>
   )
 }
 

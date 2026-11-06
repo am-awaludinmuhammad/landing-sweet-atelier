@@ -3,7 +3,7 @@ import { Button } from './ui/Button'
 
 export function Footer() {
   return (
-    <footer className="bg-white px-5">
+    <footer className="bg-white max-w-[94rem] mx-auto w-full px-5 lg:px-14">
       <div className="h-px bg-neutral-200 mb-0"></div>
 
       {/* Newsletter */}

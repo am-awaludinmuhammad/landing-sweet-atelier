@@ -12,13 +12,13 @@ function App() {
       <AnnouncementBar />
       <Header />
       <DesktopNav />
-      <section id="home">
+      <section id="hero" className="bg-white">
         <HeroSection />
       </section>
-      <section id="shop">
+      <section id="shop" className="bg-white">
         <ShopSection />
       </section>
-      <section id="about">
+      <section id="about" className="bg-white">
         <AboutSection />
       </section>
       <Footer />
