@@ -1,0 +1,162 @@
+
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond%3Awght%40300..700&family=Inter%3Awght%40100..900&display=swap');
+
+/* ========================================
+   THEME COLORS - TAILWIND CSS V4
+======================================== */
+
+@theme inline {
+  /* PRIMARY */
+  --color-primary-50: #faf8f6;
+  --color-primary-100: #f5f0eb;
+  --color-primary-200: #ebe3db;
+  --color-primary-300: #dccfc1;
+  --color-primary-400: #c9b3a1;
+  --color-primary-500: #a77b5a;
+  --color-primary-600: #9b6f51;
+  --color-primary-700: #7d5a42;
+  --color-primary-800: #49352b;
+  --color-primary-900: #2a1f18;
+  --color-primary-950: #1a120d;
+
+  /* SECONDARY */
+  --color-secondary-50: #faf9f7;
+  --color-secondary-100: #f5f1ed;
+  --color-secondary-200: #ebe5db;
+  --color-secondary-300: #dccfc1;
+  --color-secondary-400: #c9b3a1;
+  --color-secondary-500: #a7905f;
+  --color-secondary-600: #9b8456;
+  --color-secondary-700: #7d6f47;
+  --color-secondary-800: #49352b;
+  --color-secondary-900: #2a1f18;
+  --color-secondary-950: #1a120d;
+
+  /* ACCENT */
+  --color-accent-50: #fef8f3;
+  --color-accent-100: #fdeee5;
+  --color-accent-200: #fcdccb;
+  --color-accent-300: #f9c5a5;
+  --color-accent-400: #f5a977;
+  --color-accent-500: #e68552;
+  --color-accent-600: #d16a36;
+  --color-accent-700: #b0542d;
+  --color-accent-800: #8a4427;
+  --color-accent-900: #6f3b24;
+  --color-accent-950: #3d2012;
+
+  /* NEUTRAL */
+  --color-neutral-50: #fafaf9;
+  --color-neutral-100: #f5f5f4;
+  --color-neutral-200: #eae7e2;
+  --color-neutral-300: #dccfc1;
+  --color-neutral-400: #c9b3a1;
+  --color-neutral-500: #806c5c;
+  --color-neutral-600: #6f6155;
+  --color-neutral-700: #574d45;
+  --color-neutral-800: #49352b;
+  --color-neutral-900: #2a1f18;
+  --color-neutral-950: #1a120d;
+
+  /* SEMANTIC COLORS */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-neutral: var(--neutral);
+  --color-neutral-foreground: var(--neutral-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+}
+
+/* ========================================
+   ROOT VARIABLES
+======================================== */
+
+:root {
+  /* PRIMARY */
+  --primary: #a77b5a;
+  --primary-foreground: #ffffff;
+
+  /* SECONDARY */
+  --secondary: #a7905f;
+  --secondary-foreground: #ffffff;
+
+  /* ACCENT */
+  --accent: #e68552;
+  --accent-foreground: #ffffff;
+
+  /* NEUTRAL */
+  --neutral: #806c5c;
+  --neutral-foreground: #ffffff;
+
+  /* BACKGROUND */
+  --background: #faf8f6;
+  --foreground: #2a1f18;
+
+  /* CARD */
+  --card: #ffffff;
+  --card-foreground: #2a1f18;
+
+  /* BORDER & INPUT */
+  --border: #ebe3db;
+  --input: #ebe3db;
+  --ring: #a77b5a;
+
+  /* RADIUS */
+  --radius: 0.625rem;
+}
+
+@theme {
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+}
+
+/* ========================================
+   BASE STYLES
+======================================== */
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-color: var(--border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    font-size: 14px;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    cursor: pointer;
+  }
+}
+
