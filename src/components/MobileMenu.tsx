@@ -7,7 +7,7 @@ interface MobileMenuProps {
 }
 
 const PRIMARY_MENU_ITEMS = [
-  { label: 'Home', id: 'hero' },
+  { label: 'Home', id: 'home' },
   { label: 'Shop', id: 'shop' },
   { label: 'Collections', id: 'shop' },
   { label: 'About', id: 'about' },
