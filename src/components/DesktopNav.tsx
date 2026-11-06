@@ -1,8 +1,12 @@
+import { useState } from 'react'
 import { Search, ShoppingBag } from 'lucide-react'
+import { SearchDropdown } from './search'
 
 export function DesktopNav() {
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
+
   const NAV_LINKS = [
-    { label: 'Home', id: 'home' },
+    { label: 'Home', id: 'hero' },
     { label: 'Shop', id: 'shop' },
     { label: 'Collections', id: 'shop' },
     { label: 'About', id: 'about' },
@@ -32,10 +36,18 @@ export function DesktopNav() {
       </h1>
 
       {/* Actions */}
-      <div className="flex items-center gap-[22px] flex-1 justify-end">
-        <button className="hover:opacity-70 transition-opacity">
-          <Search size={19} className="text-primary-800" />
-        </button>
+      <div className="flex items-center gap-[22px] flex-1 justify-end relative">
+        <div>
+          <button
+            onClick={() => setIsSearchOpen(!isSearchOpen)}
+            className="hover:opacity-70 transition-opacity"
+            aria-label="Open search"
+            aria-expanded={isSearchOpen}
+          >
+            <Search size={19} className="text-primary-800" />
+          </button>
+          <SearchDropdown isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+        </div>
         <div className="flex items-center gap-2.25">
           <button className="hover:opacity-70 transition-opacity">
             <ShoppingBag size={19} className="text-primary-800" />

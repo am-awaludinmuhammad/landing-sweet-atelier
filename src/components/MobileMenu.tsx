@@ -7,14 +7,13 @@ interface MobileMenuProps {
 }
 
 const PRIMARY_MENU_ITEMS = [
-  { label: 'Shop All', index: '01' },
-  { label: 'Whole Cakes', index: '02' },
-  { label: 'Cake Slices', index: '03' },
-  { label: 'Gift Collections', index: '04' },
-  { label: 'Our Story', index: '05' },
+  { label: 'Home', id: 'hero' },
+  { label: 'Shop', id: 'shop' },
+  { label: 'Collections', id: 'shop' },
+  { label: 'About', id: 'about' },
 ]
 
-const UTILITY_LINKS = ['Search', 'Sign In', 'Track My Order']
+// const UTILITY_LINKS = []
 const SOCIAL_LINKS = ['INSTAGRAM', 'TIKTOK', 'FACEBOOK']
 
 export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
@@ -31,7 +30,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
       {/* Menu Panel */}
       <div className="fixed inset-0 z-50 bg-white flex flex-col overflow-y-auto">
         {/* Header with Close */}
-        <div className="sticky top-0 bg-white border-b border-neutral-200 h-16 px-5 flex items-center justify-between flex-shrink-0">
+        <div className="sticky top-0 z-10 bg-white border-b border-neutral-200 h-16 px-5 flex items-center justify-between flex-shrink-0">
           <button
             onClick={onClose}
             className="flex items-center hover:opacity-70 transition-opacity"
@@ -52,22 +51,21 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             {/* Primary Menu */}
             <div className="px-6 py-2">
               {PRIMARY_MENU_ITEMS.map((item, idx) => (
-                <div
+                <a
                   key={idx}
-                  className="flex items-center justify-between border-b border-neutral-200 py-[15px]"
+                  href={`#${item.id}`}
+                  onClick={onClose}
+                  className="flex items-center justify-between border-b border-neutral-200 py-[15px] hover:opacity-70 transition-opacity"
                 >
                   <h3 className="text-primary-800 font-serif font-medium">
                     {item.label}
                   </h3>
-                  <span className="text-neutral-600 text-[10px] font-normal tracking-[1px]">
-                    {item.index}
-                  </span>
-                </div>
+                </a>
               ))}
             </div>
 
             {/* Utility Links */}
-            <div className="px-6 py-5 flex flex-col gap-3">
+            {/* <div className="px-6 py-5 flex flex-col gap-3">
               {UTILITY_LINKS.map((link, idx) => (
                 <button
                   key={idx}
@@ -76,7 +74,7 @@ export function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
                   {link}
                 </button>
               ))}
-            </div>
+            </div> */}
 
             {/* Contact Band */}
             <div className="mx-6 bg-primary-50 px-6 py-6 flex flex-col gap-2.5 rounded">

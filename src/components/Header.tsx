@@ -1,13 +1,15 @@
-import { Menu, ShoppingBag } from 'lucide-react'
+import { Menu, ShoppingBag, Search } from 'lucide-react'
 import { useState } from 'react'
 import { MobileMenu } from './MobileMenu'
+import { SearchDropdown } from './search'
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false)
+  const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   return (
     <>
-      <header className="md:hidden bg-white border-b border-neutral-200 h-16 px-5 flex items-center justify-between">
+      <header className="md:hidden sticky top-0 z-50 bg-white border-b border-neutral-200 h-16 px-5 flex items-center justify-between relative">
         <button
           onClick={() => setMenuOpen(true)}
           className="flex items-center hover:opacity-70 transition-opacity"
@@ -19,7 +21,18 @@ export function Header() {
           SWEET ATELIER
         </h1>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-3">
+          <div>
+            <button
+              onClick={() => setIsSearchOpen(!isSearchOpen)}
+              className="hover:opacity-70 transition-opacity"
+              aria-label="Open search"
+              aria-expanded={isSearchOpen}
+            >
+              <Search size={19} className="text-primary-800 mt-2" />
+            </button>
+            <SearchDropdown isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
+          </div>
           <button className="hover:opacity-70 transition-opacity">
             <ShoppingBag size={19} className="text-primary-800" />
           </button>
