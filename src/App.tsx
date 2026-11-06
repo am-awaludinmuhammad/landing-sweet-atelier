@@ -12,7 +12,7 @@ function App() {
       <AnnouncementBar />
       <Header />
       <DesktopNav />
-      <section id="hero" className="bg-white">
+      <section id="home" className="bg-white">
         <HeroSection />
       </section>
       <section id="shop" className="bg-white">

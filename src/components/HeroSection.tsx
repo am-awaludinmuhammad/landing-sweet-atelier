@@ -58,28 +58,17 @@ export function HeroSection() {
         </div>
 
         {/* Hero Image */}
-        {/* <div className="hidden md:block md:flex-1 h-[440px] min-h-0 w-full relative overflow-hidden">
-          <ImageReveal initial>
-            <div className="absolute inset-0 right-[calc((1440px-100vw)/2)]">
-              <img
-                src="/images/hero.png"
-                alt="Artisan bakery cakes and baked goods"
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-          </ImageReveal>
-        </div> */}
-            <div className="hidden md:block md:flex-1 h-[calc(100%-60px)] min-h-0 w-full relative overflow-hidden">
-              <div className="absolute inset-y-0">
-                <ImageReveal initial>
-                <img
-                  src="/images/hero.png"
-                  alt="Artisan bakery cakes and baked goods"
-                  className="w-full h-full object-cover object-center"
-                />
-                </ImageReveal>
-              </div>
-            </div>
+        <div className="hidden md:block md:flex-1 h-[calc(100%-60px)] min-h-0 w-full relative overflow-hidden">
+          <div className="absolute inset-y-0">
+            <ImageReveal initial>
+            <img
+              src="/images/hero.png"
+              alt="Artisan bakery cakes and baked goods"
+              className="w-full h-full object-cover object-center"
+            />
+            </ImageReveal>
+          </div>
+        </div>
       </div>
     </section>
   )
