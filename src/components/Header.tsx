@@ -9,7 +9,7 @@ export function Header() {
 
   return (
     <>
-      <header className="md:hidden sticky top-0 z-50 bg-white border-b border-neutral-200 h-16 px-5 flex items-center justify-between relative">
+      <header className="md:hidden sticky top-9 z-50 bg-white border-b border-neutral-200 h-16 px-5 flex items-center justify-between relative">
         <button
           onClick={() => setMenuOpen(true)}
           className="flex items-center hover:opacity-70 transition-opacity"
